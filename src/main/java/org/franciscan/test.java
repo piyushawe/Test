@@ -34,14 +34,17 @@ public class test {
             e.printStackTrace();
         }*/
         dr.get("http://qaerp.franciscanecare.net/Secure/#");
-      dr.findElement(By.id("txtUserName")).sendKeys("admin");
+        dr.findElement(By.id("txtUserName")).sendKeys("admin");
         dr.findElement(By.id("txtPassword")).sendKeys("Admin#franciscan");
         dr.findElement(By.id("btnLogin")).click();
-
+        dr.findElement(By.xpath("//img[@src=]"))
        WebElement wb= dr.findElement(By.xpath("//*[@id=\"example\"]/tbody"));
        List<WebElement> wv =wb.findElements(By.tagName("tr"));
-       int row= wv.size();
+       int row;
+        for(row=0;row<wv.size();row++)
+        {
 
+        }
 dr.close();
     }
 }
