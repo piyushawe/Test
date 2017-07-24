@@ -13,7 +13,7 @@ public class test {
     public static void main(String[] args) throws IOException, InterruptedException {
        System.setProperty("webdriver.chrome.driver", "D:\\selenium drivers\\chromedriver_win32new\\chromedriver.exe");
         WebDriver dr = new ChromeDriver();
-        //dr.manage().window().maximize();
+        dr.manage().window().maximize();
         /* dr.get("https://www.microsoft.com/en-in/download/details.aspx?id=42299");
         dr.findElement(By.className("download-button")).click();
         dr.findElement(By.xpath("//*[@id=\"c3be6a19-ec3b-4b3b-c3f0-51317eccb8f8\"]/div/div/div[2]/div[1]/div[2]/div/table/tbody/tr[8]/td[1]/input")).click();
@@ -37,14 +37,20 @@ public class test {
         dr.findElement(By.id("txtUserName")).sendKeys("admin");
         dr.findElement(By.id("txtPassword")).sendKeys("Admin#franciscan");
         dr.findElement(By.id("btnLogin")).click();
-        dr.findElement(By.xpath("//img[@src=]"))
-       WebElement wb= dr.findElement(By.xpath("//*[@id=\"example\"]/tbody"));
+        dr.findElement(By.xpath("//img[@src=images/big/Fee-Manager.png]")).click();
+        dr.findElement(By.xpath("//*[@id=\"form2\"]/div[4]/div/ul/li[2]/a/span"));
+        dr.findElement(By.linkText("Define Bank")).click();
+        dr.findElement(By.name("ctl00$ContentPlaceHolder1$BtnControls1$btnView")).click();
+        String nw=dr.findElement(By.id("ContentPlaceHolder1_rptBank_lblAccNo_1")).getText();
+        System.out.println(nw);
+      /* WebElement wb= dr.findElement(By.xpath("//*[@id=\"example\"]/tbody"));
        List<WebElement> wv =wb.findElements(By.tagName("tr"));
        int row;
         for(row=0;row<wv.size();row++)
         {
 
         }
+        */
 dr.close();
     }
 }
